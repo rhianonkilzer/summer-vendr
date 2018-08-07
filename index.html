@@ -26,16 +26,19 @@
       </div>
     </div>
     <div class="money">
-      <button>$0.25</button>
-      <button>$0.10</button>
-      <button>$0.05</button>
+      <button onclick="app.controllers.vendController.addMoney('quarter')">$0.25</button>
+      <button onclick="app.controllers.vendController.addMoney('dime')">$0.10</button>
+      <button onclick="app.controllers.vendController.addMoney('nickel')">$0.05</button>
     </div>
-    <div class="total">
-      <p>Change:
-        <span id="change">0.00</span>
+    <div class="change">
+      <p>Change: $
+        <span id="total">0.00</span>
       </p>
     </div>
   </main>
+
+  <script src="main.js" type="module">
+  </script>
 </body>
 
 </html>
