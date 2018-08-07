@@ -29,17 +29,22 @@ class VendingMachine {
     //validate coin
     //  increase total 
     //return total
+
   }
-  vend(foodId) {
+  vend(foodId) { //taking in a string
     //find item
-    //if transactionTotal >= item.price && item.quantity > 0
-    //  item.quantity --
-    //  transactionTotal -= item.price
-    //  machineTotal += item.price
-    //return item.img
+    let item = this.foodItems.find(i=> i.id == foodId)
+    if (this.transactionTotal >= item.price && item.quantity > 0){
+      item.quantity --
+      this.transactionTotal -= item.price
+      this.machineTotal += item.price
+      return item.img
+    } 
+    
   }
   giveChange() {
-    //transactionTotal = 0
+    this.transactionTotal = 0
+    
   }
 
   getItems() {
