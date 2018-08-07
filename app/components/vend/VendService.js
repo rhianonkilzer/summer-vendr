@@ -15,6 +15,10 @@ class VendService {
   getItems() {
     return vm.getItems()
   }
+getTotal(){
+  return vm.transactionTotal
+}
+
   addMoney(type) {
     console.log('service: ', type)
     //confirm currency is acceptable

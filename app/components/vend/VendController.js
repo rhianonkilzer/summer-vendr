@@ -53,6 +53,7 @@ class VendController {
   vend (foodId){
     let img = vendService.vend(foodId)
     drawVend(img)
+    drawTotal(vendService.getTotal())
   }
 
 

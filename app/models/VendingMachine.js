@@ -26,14 +26,14 @@ class VendingMachine {
   }
 
   addMoney(coin) {
-    //validate coin
+    //validate coin make sure coin is 
     //  increase total 
     //return total
 
   }
   vend(foodId) { //taking in a string
     //find item
-    let item = this.foodItems.find(i=> i.id == foodId)
+    let item = this.foodItems.find(i => i.id == foodId)
     if (this.transactionTotal >= item.price && item.quantity > 0){
       item.quantity --
       this.transactionTotal -= item.price
