@@ -40,7 +40,7 @@ class VendingMachine {
       this.machineTotal += item.price
       return item.img
     } 
-    
+    return "purchase failed"
   }
   giveChange() {
     this.transactionTotal = 0

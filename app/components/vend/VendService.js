@@ -25,6 +25,11 @@ class VendService {
     return vm.transactionTotal.toFixed(2)
   }
 
+  vend(foodId){
+    let img = vm.vend(foodId)
+    return img
+  }
+
 }
 
 

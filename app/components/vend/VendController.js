@@ -16,7 +16,7 @@ function drawItems() {
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
     template += `
-            <div class="food-item" onclick>
+            <div class="food-item" onclick="app.controllers.vendController.vend('${item.id}')">
               <img src="${item.img}" alt = "">
               <h3> ${item.price}</h3> 
             </div>
@@ -25,7 +25,9 @@ function drawItems() {
   document.getElementById('food').innerHTML = template
 }
 
-function drawVend() {
+function drawVend(img) {
+//drawpurchased item
+console.log("item", img)
 
 }
 
@@ -46,6 +48,11 @@ class VendController {
     let total = vendService.addMoney(cur)
     console.log('returned to controller: ', total)
     drawTotal(total)
+  }
+
+  vend (foodId){
+    let img = vendService.vend(foodId)
+    drawVend(img)
   }
 
 
