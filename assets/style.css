@@ -1,8 +1,8 @@
-.food img {
+#food img {
   height: 100px;
 }
 
-.food {
+#food {
   display: flex;
 }
 

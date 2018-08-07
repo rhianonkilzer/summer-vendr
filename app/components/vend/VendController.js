@@ -10,7 +10,19 @@ function drawTotal(total) {
 }
 
 function drawItems() {
-  let items = vendService.getItems
+  let items = vendService.getItems()
+  //draw the items to the page
+  let template = ''
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    template += `
+            <div class="food-item" onclick>
+              <img src="${item.img}" alt = "">
+              <h3> ${item.price}</h3> 
+            </div>
+            `
+  }
+  document.getElementById('food').innerHTML = template
 }
 
 function drawVend() {
@@ -36,7 +48,9 @@ class VendController {
     drawTotal(total)
   }
 
+
 }
 
+drawItems()
 
 export default VendController

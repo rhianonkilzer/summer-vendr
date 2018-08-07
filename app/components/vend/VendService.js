@@ -1,4 +1,4 @@
-import VendingMachine from "../../models/VendingMachine";
+import VendingMachine from "../../models/VendingMachine.js";
 
 //Private Parts
 
