@@ -5,8 +5,16 @@ import VendService from "./VendService.js";
 //variables outside of the exported class are not accessible
 const vendService = new VendService()
 
-function draw(total) {
+function drawTotal(total) {
   document.getElementById('total').innerText = total
+}
+
+function drawItems() {
+  let items = vendService.getItems
+}
+
+function drawVend() {
+
 }
 
 //PUBLIC PARTS
@@ -19,12 +27,13 @@ class VendController {
   }
 
 
+
   //used to send money to service
   addMoney(cur) {
     console.log('controller: ', cur)
     let total = vendService.addMoney(cur)
     console.log('returned to controller: ', total)
-    draw(total)
+    drawTotal(total)
   }
 
 }

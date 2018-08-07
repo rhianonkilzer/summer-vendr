@@ -1,14 +1,10 @@
+import VendingMachine from "../../models/VendingMachine";
+
 //Private Parts
 
-let total = 0
 
+const vm = new VendingMachine()
 
-//dictionary
-const currency = {
-  quarter: .25,
-  dime: .1,
-  nickel: .05
-}
 
 
 //public to controller
@@ -16,16 +12,19 @@ class VendService {
   constructor() {
 
   }
-
+  getItems() {
+    return vm.getItems()
+  }
   addMoney(type) {
     console.log('service: ', type)
     //confirm currency is acceptable
-    if (currency[type]) {
+    if (vm.acceptableCurrency[type]) {
       //add to total
-      total += currency[type]
+      vm.transactionTotal += vm.acceptableCurrency[type]
     }
-    return total.toFixed(2)
+    return vm.transactionTotal.toFixed(2)
   }
+
 }
 
 
