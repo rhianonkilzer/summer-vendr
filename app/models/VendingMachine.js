@@ -34,17 +34,17 @@ class VendingMachine {
   vend(foodId) { //taking in a string
     //find item
     let item = this.foodItems.find(i => i.id == foodId)
-    if (this.transactionTotal >= item.price && item.quantity > 0){
-      item.quantity --
+    if (this.transactionTotal >= item.price && item.quantity > 0) {
+      item.quantity--
       this.transactionTotal -= item.price
       this.machineTotal += item.price
       return item.img
-    } 
+    }
     return "purchase failed"
   }
   giveChange() {
     this.transactionTotal = 0
-    
+
   }
 
   getItems() {

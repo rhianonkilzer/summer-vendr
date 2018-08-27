@@ -27,6 +27,7 @@ function drawItems() {
 
 function drawVend(img) {
 //drawpurchased item
+document.getElementById('vended').setAttribute('src', img)
 console.log("item", img)
 
 }
